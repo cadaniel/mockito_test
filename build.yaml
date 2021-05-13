@@ -1,0 +1,22 @@
+targets:
+  $default:
+    builders:
+      json_serializable:
+        options:
+          any_map: true
+          explicit_to_json: true
+      moor_generator:
+        options:
+          generate_connect_constructor: true
+        enabled: false
+      moor_generator|moor_generator_not_shared:
+        enabled: true
+        options:
+          generate_connect_constructor: true
+      moor_generator|preparing_builder:
+        enabled: true
+        options:
+          generate_connect_constructor: true
+      # Run mockito when moor is done!
+#      mockito|mockBuilder:
+#        enabled: false
