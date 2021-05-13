@@ -6,6 +6,7 @@ import 'dart:async' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito_test/model/freezed_model.dart' as _i2;
+import 'package:mockito_test/moor/database.dart' as _i5;
 import 'package:mockito_test/service/service.dart' as _i3;
 
 // ignore_for_file: comment_references
@@ -30,12 +31,12 @@ class MockSampleService extends _i1.Mock implements _i3.SampleService {
       (super.noSuchMethod(Invocation.method(#giveModel, []),
           returnValue: _FakeFreezedModel()) as _i2.FreezedModel);
   @override
-  _i4.Future<List<dynamic>> getUsers() =>
+  _i4.Future<List<_i5.User>> getUsers() =>
       (super.noSuchMethod(Invocation.method(#getUsers, []),
-              returnValue: Future<List<dynamic>>.value(<dynamic>[]))
-          as _i4.Future<List<dynamic>>);
+              returnValue: Future<List<_i5.User>>.value(<_i5.User>[]))
+          as _i4.Future<List<_i5.User>>);
   @override
-  void saveUser(dynamic user) =>
+  void saveUser(_i5.User? user) =>
       super.noSuchMethod(Invocation.method(#saveUser, [user]),
           returnValueForMissingStub: null);
 }

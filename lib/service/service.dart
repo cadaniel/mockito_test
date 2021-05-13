@@ -13,7 +13,7 @@ class SampleService {
   }
 
   Future<List<User>> getUsers() async {
-    return _userDao.getUsers();
+    return _userDao.getUser();
   }
 
   void saveUser(User user) => _userDao.saveUser(user);
